@@ -10,6 +10,7 @@
     "clean": "rm -rf dist",
     "test": "jest",
     "demo": "node examples/demo.js",
+    "usage": "npx ts-node --transpile-only examples/usage.ts",
     "lint": "eslint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepublishOnly": "npm run clean && npm run build",

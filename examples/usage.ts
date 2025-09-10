@@ -132,6 +132,6 @@ class ExtendedApiClient extends ApiClient {
 }
 
 // Run examples (uncomment to test)
-// examples();
+examples();
 
 export { examples, ExtendedApiClient };
