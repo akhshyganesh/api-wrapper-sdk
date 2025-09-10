@@ -60,4 +60,4 @@ const productValidation = {
   }
 };
 
-module.exports = createCRUDRoutes('products', productValidation);
+module.exports = createCRUDRoutes('products', 'products', productValidation);

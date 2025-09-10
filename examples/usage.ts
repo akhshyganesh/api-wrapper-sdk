@@ -5,7 +5,7 @@ import { ApiClient, createApiClient } from '../src/index';
 async function examples() {
   // Create API client instance
   const apiClient = createApiClient({
-    baseURL: 'https://api.example.com',
+    baseURL: 'http://localhost:3001',
     timeout: 30000,
     retries: 3,
     retryDelay: 1000,
@@ -115,7 +115,6 @@ class ExtendedApiClient extends ApiClient {
   async createUserWithWelcomePost(userData: { name: string; email: string; password: string }) {
     // Create user first
     const userResponse = await this.createUser(userData);
-    const userId = userResponse.data.id;
 
     // Create welcome post
     const postResponse = await this.createPost({

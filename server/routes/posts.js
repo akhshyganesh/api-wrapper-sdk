@@ -56,4 +56,4 @@ const postValidation = {
   }
 };
 
-module.exports = createCRUDRoutes('posts', postValidation);
+module.exports = createCRUDRoutes('posts', 'posts', postValidation);

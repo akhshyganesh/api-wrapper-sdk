@@ -42,4 +42,4 @@ const userValidation = {
   }
 };
 
-module.exports = createCRUDRoutes('users', userValidation);
+module.exports = createCRUDRoutes('users', 'users', userValidation);
