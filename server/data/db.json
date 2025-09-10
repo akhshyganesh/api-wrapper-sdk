@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Updated Test User",
+      "email": "updated@example.com",
+      "age": 30,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2025-09-10T08:49:07.437Z"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "age": 25,
+      "createdAt": "2024-01-02T00:00:00.000Z",
+      "updatedAt": "2024-01-02T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "age": 35,
+      "createdAt": "2024-01-03T00:00:00.000Z",
+      "updatedAt": "2024-01-03T00:00:00.000Z"
+    },
+    {
+      "name": "Test User",
+      "email": "test@example.com",
+      "age": 25,
+      "id": 4,
+      "createdAt": "2025-09-10T08:49:07.435Z",
+      "updatedAt": "2025-09-10T08:49:07.435Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with APIs",
+      "content": "This is a comprehensive guide to API development...",
+      "authorId": 1,
+      "tags": [
+        "api",
+        "tutorial"
+      ],
+      "published": true,
+      "createdAt": "2024-01-01T10:00:00.000Z",
+      "updatedAt": "2024-01-01T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Best Practices for REST APIs",
+      "content": "Here are some best practices when building REST APIs...",
+      "authorId": 2,
+      "tags": [
+        "rest",
+        "best-practices"
+      ],
+      "published": true,
+      "createdAt": "2024-01-02T15:30:00.000Z",
+      "updatedAt": "2024-01-02T15:30:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "High-performance laptop for developers",
+      "price": 1299.99,
+      "category": "Electronics",
+      "inStock": true,
+      "createdAt": "2024-01-01T08:00:00.000Z",
+      "updatedAt": "2024-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse",
+      "price": 29.99,
+      "category": "Electronics",
+      "inStock": true,
+      "createdAt": "2024-01-01T09:00:00.000Z",
+      "updatedAt": "2024-01-01T09:00:00.000Z"
+    }
+  ]
+}
