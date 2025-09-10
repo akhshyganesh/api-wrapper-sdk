@@ -8,7 +8,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   const db = new JsonDatabase();
 
   // GET /collection - Get all items with optional filtering and pagination
-  router.get(`/${prefix}`, async (req, res, next) => {
+  router.get(`/`, async (req, res, next) => {
     try {
       const { page = 1, limit = 10, ...filters } = req.query;
       
@@ -30,7 +30,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   });
 
   // GET /collection/:id - Get item by ID
-  router.get(`/${prefix}/:id`, async (req, res, next) => {
+  router.get(`/:id`, async (req, res, next) => {
     try {
       const item = await db.getById(collection, req.params.id);
       
@@ -51,7 +51,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   });
 
   // POST /collection - Create new item
-  router.post(`/${prefix}`, validateBody(validationSchema.create || {}), async (req, res, next) => {
+  router.post(`/`, validateBody(validationSchema.create || {}), async (req, res, next) => {
     try {
       const newItem = await db.create(collection, req.body);
       
@@ -67,7 +67,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   });
 
   // PUT /collection/:id - Update item
-  router.put(`/${prefix}/:id`, validateBody(validationSchema.update || {}), async (req, res, next) => {
+  router.put(`/:id`, validateBody(validationSchema.update || {}), async (req, res, next) => {
     try {
       const updatedItem = await db.update(collection, req.params.id, req.body);
       
@@ -89,7 +89,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   });
 
   // PATCH /collection/:id - Partial update
-  router.patch(`/${prefix}/:id`, async (req, res, next) => {
+  router.patch(`/:id`, async (req, res, next) => {
     try {
       const updatedItem = await db.update(collection, req.params.id, req.body);
       
@@ -111,7 +111,7 @@ const createCRUDRoutes = (prefix, collection, validationSchema = {}) => {
   });
 
   // DELETE /collection/:id - Delete item
-  router.delete(`/${prefix}/:id`, async (req, res, next) => {
+  router.delete(`/:id`, async (req, res, next) => {
     try {
       const deletedItem = await db.delete(collection, req.params.id);
       
