@@ -5,7 +5,7 @@ import { ApiClient, createApiClient } from '../src/index';
 async function examples() {
   // Create API client instance
   const apiClient = createApiClient({
-    baseURL: 'http://localhost:3001',
+    baseURL: 'http://localhost:3001/api',
     timeout: 30000,
     retries: 3,
     retryDelay: 1000,
